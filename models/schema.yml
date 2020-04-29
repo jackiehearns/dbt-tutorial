@@ -40,8 +40,7 @@ models:
               values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
       - name: lifetime_value
   - name: stg_payments
-    description: This model cleans up provides order payment information
+    description: This model cleans up order payment information
     columns:
       - name: order_id
-        description: Primary key
 
