@@ -10,6 +10,14 @@ models:
           - not_null
       - name: first_order_date
         description: NULL when a customer has not yet placed an order.
+models:
+  - name: orders
+    description: summary of order information
+    columns:
+      - name: order_id
+        description: Primary key
+        tests:
+          - not_null
   - name: stg_customers
     description: This model cleans up customer data
     columns:
@@ -30,3 +38,10 @@ models:
         tests:
           - accepted_values:
               values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
+      - name: lifetime_value
+  - name: stg_payments
+    description: This model cleans up provides order payment information
+    columns:
+      - name: order_id
+        description: Primary key
+
