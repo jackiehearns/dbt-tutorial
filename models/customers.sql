@@ -6,7 +6,9 @@ orders as (
 ),
 
 payments as (
-    select * from {{ ref('orders') }}
+    select * 
+    from {{ ref('orders') }}
+
 ),
 
 customer_orders as (
