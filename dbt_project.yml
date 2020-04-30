@@ -5,6 +5,8 @@
 name: 'jaffle_shop'
 version: '1.0.0'
 
+require-dbt-version: ">=0.15.0"
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'jaffle_shop'
 
@@ -33,3 +35,4 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   jaffle_shop:
     materialized: view
+
